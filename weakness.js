@@ -1,0 +1,6 @@
+class Weakness{
+
+    constructor(){
+        
+    }
+}
