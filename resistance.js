@@ -1,6 +1,6 @@
-class Resisstance{
+class Resistance{
 
-    constructor(){
-
+    constructor(energyType){
+        this.energyType = energyType;
     }
 }

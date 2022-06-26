@@ -1,8 +1,7 @@
 class EnergyType{
 
-    constructor(name, type){
+    constructor(name, value){
         this.name = name;
-        this.type = type;
+        this.value = value;
     }
-
 }

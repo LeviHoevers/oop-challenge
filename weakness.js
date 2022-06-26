@@ -1,6 +1,8 @@
 class Weakness{
 
-    constructor(){
-        
+    constructor(energyType, multiplier){
+        this.energyType = energyType;
+        this.multiplier = multiplier;
+   
     }
 }

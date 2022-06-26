@@ -1,10 +1,9 @@
-class move {
+class Move{
 
-    constructor(name, type, damage){
+    constructor(name, damage){
         this.name = name;
-        this.type = type;
         this.damage = damage;
-
     }
+
     
 }

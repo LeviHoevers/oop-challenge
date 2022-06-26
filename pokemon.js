@@ -1,14 +1,18 @@
-class Pokemon extends EnergyType{
+class Pokemon{
 
-    constructor(name, health, hitPoints, type){
+    constructor(name, health, hitPoints, energyType, move, weakness, resistance){
+
         this.name = name;
         this.health = health;
         this.hitPoints = hitPoints;
-        this.type = type;
+        this.energyType = energyType;
+        this.move = move;
+        this.weakness = weakness;
+        this.resistance = resistance;
 
 
-        // function attack(){
-        //     console.log("men");
-        // }
+        function attack(){
+            this.move
+        }
     }
 }
