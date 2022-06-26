@@ -5,5 +5,4 @@ class Move{
         this.damage = damage;
     }
 
-    
 }

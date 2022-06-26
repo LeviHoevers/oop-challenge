@@ -1,6 +1,8 @@
 class Resistance{
 
-    constructor(energyType){
+    constructor(energyType, value){
         this.energyType = energyType;
+        this.value = value;
     }
+    
 }
