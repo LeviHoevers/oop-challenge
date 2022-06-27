@@ -16,19 +16,19 @@ class Pokemon{
 
     }
     
-    useMove(opponent, move){
-        opponent.takeDamage(this.energyType, this.move);
+    useMove(opponent, move, index){
+        opponent.takeDamage(this.energyType, this.move, index);
     }
 
-    takeDamage(energyType, move){
+    takeDamage(energyType, move, index){
         if(energyType.name == this.resistance.energyType.name){
-            move.damage = move.damage / this.resistance.value;
+            move[index].damage = move[index].damage - this.resistance.value;
         }
         if(energyType.name == this.weakness.energyType.name){
-            this.health = this.health - move.damage * this.weakness.multiplier;
+            this.health = this.health - move[index].damage * this.weakness.multiplier;
         }
         else{
-            this.health = this.health - move.damage;
+            this.health = this.health - move[index].damage;
         }
     }
 

@@ -2,7 +2,7 @@ var name = "Pikachu";
 var health = 80;
 var hitpoints = 80;
 var energyType = new EnergyType("electric", 10);
-var move = new Move("Electric ring", 50);
+var move =  [new Move("Electric ring", 50), new Move("Pika punch", 20)];
 var weakness = new Weakness(new EnergyType("Fire", 20), 1.5);
 var resistance = new Resistance(new EnergyType("Fighting", 20), 20);
 
@@ -16,7 +16,7 @@ var name = "Charmander";
 var health = 60;
 var hitpoints = 60;
 var energyType = new EnergyType("fire", 10);
-var move = new Move("flare", 30);
+var move = [new Move("flare", 30), new Move("Head Butt", 10)];
 var weakness = new Weakness(new EnergyType("water", 20), 2);
 var resistance = new Resistance(new EnergyType("lightning", 20), 10);
 
@@ -26,19 +26,19 @@ Pokemon.pokemonArray.push(charmander);
 
 console.log(charmander);
 
-console.log(Pokemon.pokemonArray[0])
+console.log(Pokemon.pokemonArray[0].move[0])
 
 document.write("charmander has " + Pokemon.pokemonArray[1].health + " Health")
 document.write("<br>")
-document.write("Pikachu attacks charmander with Electric Ring!");
-Pokemon.pokemonArray[0].useMove(Pokemon.pokemonArray[1], 0);
+document.write("Pikachu attacks charmander with " + Pokemon.pokemonArray[0].move[0].name + "!");
+Pokemon.pokemonArray[0].useMove(Pokemon.pokemonArray[1], Pokemon.pokemonArray[0].move, 0);
 document.write("<br>")
 document.write("charmander has " + Pokemon.pokemonArray[1].health + " Health")
 document.write("<br>")
 document.write("Pikachu has " + Pokemon.pokemonArray[0].health + " Health")
 document.write("<br>")
-document.write("charmander attacks Pikachu with Flare!")
-Pokemon.pokemonArray[1].useMove(Pokemon.pokemonArray[0], 1);
+document.write("charmander attacks Pikachu with " + Pokemon.pokemonArray[1].move[0].name + "!")
+Pokemon.pokemonArray[1].useMove(Pokemon.pokemonArray[0], Pokemon.pokemonArray[1].move, 0);
 document.write("<br>")
 document.write("Pikachu has " + Pokemon.pokemonArray[0].health + " Health")
 document.write("<br>")
